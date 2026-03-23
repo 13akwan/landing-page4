@@ -2,12 +2,24 @@
     margin: 0;
 }
 
-header{
-
+.header-bg {
+    position: relative;
+    background-image: url("assets/archive.JPG");
+    background-size: cover;
+    background-position: center;
+    height: 70vh;
 }
 
-.header-bg{
-    background-color:black ;
+.header-bg::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0,0,0,0.4);
+}
+
+.header-bg > * {
+    position: relative;
+    z-index: 1;
 }
 
 .navbar{
@@ -16,6 +28,16 @@ header{
     align-items: center;
 
     padding: 0 24px;
+    padding-top: 30px;
+}
+
+.logo{
+    width: 100px;
+}
+
+.logo img{
+    width: 100%;
+    object-fit: cover;
 }
 
 .nav-links{
@@ -26,15 +48,17 @@ header{
 .nav-links a{
     color: white;
     text-decoration: none;
-
 }
 
 .hero{
-
+    position: absolute;
+    bottom: 30px;
+    left: 24px;
 }
 
 .hero-text{
-
+    margin-bottom: 30px;
+    text-align: left;
 }
 
 .hero-text h1{
@@ -42,17 +66,20 @@ header{
 }
 
 .hero-click{
-
+    display: flex;
+    margin-bottom: 30px;
 }
 
 .hero-click a{
+    text-decoration: none;
     color: hotpink;
+    background-color: black;
     border: 1px solid white;
     padding: 2px 10px;
 }
 
 .archive{
-
+    padding: 0 32px;
 }
 
 .archive-title{
@@ -63,16 +90,16 @@ header{
 .archive-bg {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 30px;
+    gap: 10px;
+
 }
 
 .archive-item {
     margin-top: 30px;
-    
 }
 
 .archive-photos{
-
+ 
 }
 
 .archive-photos img{
@@ -98,13 +125,27 @@ header{
 
 .article-item{
     margin-top: 30px;
-    display: flex;
-    flex: 1;
-
-    width: 310px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
 }
 
 .article-item img{
     width: 100%;
     aspect-ratio: 4/5;
+    object-fit: cover;
+}
+
+footer{
+    padding: 0 24px;
+    background-color: black;
+    height: 100px;
+
+    align-items: center;
+    justify-content: right;
+    display: flex;
+}
+
+.footer-text{
+    color: white;
+    text-align: right;
 }
